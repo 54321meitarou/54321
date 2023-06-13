@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登場角色</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="icon" href="/pics/LOGO.png" type="image/x-icon">
+</head>
+
+<link rel="stylesheet" type="text/css" href="background.css">
+<script src="navbar.js"></script>
+<script src="anime.js"></script>
+
+
+
+<style>
+    .squareleftcc-content,
+    .squarerightcc-content {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        animation-duration: 1s;
+        animation-delay: 0.1s;
+    }
+
+    .squareleft-image,
+    .squareright-image {
+        width: 50%;
+        padding: 10px;
+        padding-top: 10%;
+        align-items: center;
+    }
+
+    .squareleft-text {
+        position: relative;
+        top: 100px;
+        width: 50%;
+        left: -10%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .squareright-text {
+        position: relative;
+        top: 100px;
+        width: 50%;
+        right: -5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+    <div id="container">
+        <div id="navbar-setup">
+            <div id="navbar" data-bs-spy="scroll" data-bs-target="#navbar"></div>
+            <!-- 必加，控navbar -->
+
+
+
+            <div class="bg">
+                <div class="bg2">
+                    <!-- 必加，控背景圖 -->
+
+                    <div class="screen" id="content">
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                        <h1 class="type1 animate__animated animate__fadeIn">登場角色</h1>
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                        <div class="col-md-10">
+                            <div class="squareleftcc-content animate__animated animate__fadeInLeft">
+                                <div class="squareleft-image">
+                                    <img src="/pics/主角完稿.png" alt="" style="width: 100%;">
+                                </div>
+
+                                <div class="squareleft-text">
+
+                                    <!-- 這邊可能要針對響應視窗調整div的排列方式 -->
+                                    <!-- md圖片跟文字的排法是左右，sm是上下之類的 -->
+
+                                    <h1><b>相良梅太郎</b> </h1>
+                                    <div class="enter-tx"></div>
+                                    <h5>
+
+                                        <p><b>「我覺得，是時候了。」</b></p>
+                                        <div class="enter-tx"></div>
+                                        <p><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>浪人武士的頭領。深諳自己追隨的武將在文官上任後就下落不明必有內幕，於是作為其親信之一，以被遣散的浪人領導身分發起這場討伐。
+                                        </p>
+                                        <p>性格正向、具備強大的領導能力，美中不足的是正義感過剩反而形成一股傻勁。</p>
+                                        <p> ​</p>
+
+                                        <p>『他是一位非常具有領導能力的武士，</p>
+                                        <p> 無論是揮劍的動作、氣勢，以及眼中的那股堅毅，</p>
+                                        <p>無一不乏領導者之姿...。</p>
+
+                                        <p>但依我所實見，</p>
+                                        <p> 他身上所散發出的那股衝勁，或者該說是傻勁，</p>
+                                        <p> 也許才是他受人擁戴的原因。』</p>
+                                        <p> ​</p>
+
+                                        <p> ──《束梅志略》</p>
+
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                        <div class="squareright col-md-10">
+                            <div class="squarerightcc-content animate__animated animate__fadeInRight">
+                                <div class="squareright-text">
+
+                                    <h1><b>八咫千鶴</b> </h1>
+                                    <div class="enter-tx"></div>
+                                    <h5>
+
+                                        <p><b>「那就，照著計劃走吧。」</b></p>
+                                        <div class="enter-tx"></div>
+                                        <p><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>革命軍中的軍師，乍看是位親切和善的大姊姊，實則集機敏與神祕於一身、深藏不露，是武士一行人的得力後盾。
+                                        </p>
+                                        <p>主要負責謀略與策畫武士們的訓練，在進行訓練時會比平時嚴肅，說話有一定程度的震懾力。</p>
+                                        <p> ​</p>
+
+                                        <p>「梅太郎身邊那位女子？你怕得不是新來的吧。」</p>
+                                        <p>「多謀善慮，智周萬物，<br>
+                                            城府極深卻又沉默寡言的一位女性。」</p>
+                                        <p>「講到她的出身可謂是眾說紛紜，大武將的義妹、天皇側室的遺孤，甚至是大陰陽家安倍晴明的後代...，但無人知曉這個問題的謎底。」</p>
+                                        <p>「唉，還是勸你少管點兒！這些事情不是我們這群一般人該打探的，也是時候該回去站哨了...。」</p>
+                                        <p> ​</p>
+
+                                        <p>──《泗束梅軼噎：雜記》</p>
+                                    </h5>
+                                </div>
+                                <div class="squareright-image">
+                                    <img src="pics/軍師完稿.png" alt="" style="width: 100%;">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                        <div class="col-md-10">
+                            <div class="squareleftcc-content animate__animated animate__fadeInLeft">
+                                <div class="squareleft-image ">
+                                    <img src="pics/文官完稿.png" alt="" style="width: 100%;">
+                                </div>
+                                <div class="squareleft-text">
+
+                                    <h1><b>御岐山吹</b> </h1>
+                                    <div class="enter-tx"></div>
+                                    <h5>
+
+                                        <p><b>「哼，你們只是群螻蟻。」</b></p>
+                                        <div class="enter-tx"></div>
+                                        <p><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>原先是天皇手下的文官，在大武將轉讓政權後成為現任掌權者；然而上任後卻一反曾經的溫文儒雅，露出他財大氣粗、巧言令色的真面目。
+                                        </p>
+                                        <p><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>所在宮殿名為束梅寺，喜愛收藏各式各樣的高級物品。本身很弱卻又貪生怕死，於是給自己配發了一支頗具實力的親衛隊。
+                                        </p>
+                                        <p> ​</p>
+
+                                        <p>『高麗青瓷五圾、古九谷水注三件、<br>彩瓷文盤二只、乾山京燒三岌...。』</p>
+                                        <p>這些玩物，先暫且放在文房前的賞物櫃吧，<br>
+                                            灑點徵收來的錢，就能讓那些豪紳閉嘴也算是足夠了。</p>
+                                        <p>果然還是想把那璽玉印也放入我的收藏之中把玩呢。</p>
+                                        <p> ​</p>
+
+                                        <p>──《???》</p>
+
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                        <div class="squareright col-md-10">
+                            <div class="squarerightcc-content animate__animated animate__fadeInRight">
+                                <div class="squareright-text">
+
+                                    <h1><b>燐</b> </h1>
+                                    <div class="enter-tx"></div>
+                                    <h5>
+
+                                        <p><b>「......。」</b></p>
+                                        <div class="enter-tx"></div>
+                                        <p><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>藏匿於暗處的忍者集團其中一人，與浪人武士有著相同目標，因此現身給與武士們重要情報與協助。說話精簡、沉著冷靜，給人猜不透心思的感覺。
+                                        </p>
+                                        <p> ​</p>
+
+                                        <p>『<br>
+                                            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>燐燐志業，<br>
+                                            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>得是非成空，<br>
+                                            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>則方為聖者。<br>
+                                            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>知意能忍重，<br>
+                                            <a>&nbsp;&nbsp;&nbsp;&nbsp;</a>則方為信者。 <br>
+                                            <a> ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​</a>』
+                                        </p>
+                                        <p> ​</p>
+
+                                        <p>──《家訓》殘頁</p>
+                                    </h5>
+                                </div>
+                                <div class="squareright-image">
+                                    <img src="pics/忍者完稿.png" alt="" style="width: 100%;">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="enter"></div>
+                        <div class="enter"></div>
+
+                    </div>
+                </div>
+                <div>
+                    <iframe src="snow.html" frameborder="0" class="fixed-iframe" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+        <a id="back-to-top" href="#content" class="gototop">
+            <i class="bi bi-arrow-up-circle"></i> 回到頂部 </a>
+        <script src="gototop.js"></script>
+        <!-- 必加，控按鈕 -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- 必加，控動畫 -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>

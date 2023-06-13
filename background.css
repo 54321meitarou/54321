@@ -1,0 +1,818 @@
+.icon:hover {
+  opacity: 80%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+}
+
+/* menu */
+
+/* 背景底圖跟固定粒子用 */
+.bg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(24, 23, 23);
+  z-index: 1;
+}
+
+.bg2 {
+  position: relative;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-image: url(pics/BG.png);
+  background-repeat: repeat-y;
+  z-index: 1;
+}
+
+.fixed-iframe {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe {
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* 整條網頁的容器 */
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+
+
+/* 愚蠢卡位用槓槓 */
+.enter {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
+}
+
+.enter-tx {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+}
+
+
+
+
+
+
+/* 按鈕 */
+
+
+.button .btn {
+  color: #ffffff;
+  height: auto;
+  width: auto;
+  position: relative;
+  font-size: 12px;
+  border-radius: 15px;
+  background-color: #9b1d1f;
+  border: none;
+}
+
+.button .btn:hover {
+  background-color: rgba(155, 29, 31, 0.5);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+/* 訓練內容跟武士團隊的同頁跳轉選單 */
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  z-index: 5;
+  opacity: 0;
+}
+
+.link {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 18px;
+  text-align: center;
+}
+
+.link:hover {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(192, 14, 14);
+  text-align: center;
+}
+
+
+
+
+/* 全部的字，1是標題，2是置中內文，3是齊左內文 */
+
+.type1 {
+  font-weight: bold;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  opacity: 0;
+}
+
+.type2 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  opacity: 0;
+  padding: 6px;
+}
+
+.type2n {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.type3 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  opacity: 0;
+  padding: 6px;
+}
+
+.type22 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  opacity: 0;
+  padding: 6px;
+}
+
+
+
+
+
+
+
+/* 角色對話框 */
+
+.squareleft-content,
+.squareright-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation-duration: 1.5s;
+  animation-delay: 0.1s;
+  padding-top: 1.5%;
+}
+
+/* 動畫 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.squareleft {
+  position: relative;
+  opacity: 0;
+}
+
+.squareleft.animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.05s;
+}
+
+.squareleft {
+  position: relative;
+  opacity: 0;
+}
+
+.squareright {
+  position: relative;
+  display: flex;
+  left: 100%;
+  transform: translate(-100%, 0%);
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.message-position {
+  position: relative;
+  justify-content: left;
+  top: 6px;
+  left: 90px;
+  z-index: 2;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  opacity: 0;
+}
+
+.message-position.animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.05s;
+}
+
+.message-name {
+  position: relative;
+  justify-content: left;
+  left: 90px;
+  z-index: 2;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  opacity: 0;
+}
+
+.message-name.animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.05s;
+}
+
+.message {
+  position: relative;
+  align-items: center;
+  height: auto;
+  width: fit-content;
+  max-width: 80%;
+  justify-content: left;
+  left: 10px;
+  top: -8px;
+  z-index: 2;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 24px;
+  background-color: rgb(252, 252, 252);
+  border: none;
+  border-radius: 40px;
+  display: flex;
+}
+
+.reply-box {
+  position: relative;
+  display: flex;
+  height: auto;
+  max-width: 60%;
+  justify-content: flex-end;
+  min-width: 100%;
+  padding-top: 2%;
+}
+
+.reply-content {
+  z-index: 2;
+  max-width: 60%;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 10px 24px;
+  background-color: darkred;
+  border: none;
+  border-radius: 40px;
+  right: 3%;
+  position: relative;
+  width: fit-content;
+  opacity: 0;
+}
+
+.replyimg-content {
+  z-index: 2;
+  max-width: 60%;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 20px 20px;
+  background-color: darkred;
+  border: none;
+  border-radius: 40px;
+  right: 3%;
+  position: relative;
+  width: fit-content;
+  opacity: 0;
+}
+
+.reply-content.animate__fadeInUp {
+  opacity: 1;
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.reply-img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+#imageModal .modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+
+}
+
+.replyimg-content.animate__fadeInUp {
+  opacity: 1;
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+
+
+
+.time {
+  position: relative;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+}
+
+.time.animate__fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.05s;
+}
+
+.photo {
+  position: relative;
+  display: flex;
+  max-width: 60px;
+  max-height: 60px;
+  top: -4px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.photon {
+  position: relative;
+  display: flex;
+  max-width: 60px;
+  max-height: 60px;
+  top: -4px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* popup */
+
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.type11 {
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+}
+
+.type12 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.type13 {
+  position: relative;
+  display: flex;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding: 6px;
+}
+
+
+
+
+
+/* 放大圖片 */
+
+
+.modal-content {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.modal-title {
+  font-size: 20px;
+}
+
+
+/* 放大圖片2(carousel) */
+
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.fullscreen-modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  position: relative;
+  display: flex;
+  top: 40px;
+  max-height: 85%;
+  max-width: auto;
+}
+
+.carousel-inner {
+  position: relative;
+  display: flex;
+  width: 100vh;
+}
+
+
+
+
+
+
+/* carosel */
+
+.carousel-box {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height:80% ;
+  justify-content: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+  position: relative;
+  display: block;
+  width: 60%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  transition-duration: 0.3s;
+  cursor: pointer;
+  max-height:auto ;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+
+
+
+
+
+
+/* 影片、首頁圖片 */
+
+.intro {
+  position: fixed;
+  padding-top: 4%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background-color: rgb(0, 0, 0);
+  animation-name: fadeOutContainer;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.autoplay-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation-name: fadeOutImage;
+  animation-duration: 1s;
+  animation-delay: 11s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 10;
+}
+
+@keyframes fadeOutContainer {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutImage {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.autoplay-video::-webkit-media-controls {
+  display: none;
+}
+
+.autoplay-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.autoplay-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.hide {
+  visibility: hidden;
+  z-index: -2;
+}
+
+
+
+
+
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  z-index: 2;
+  opacity: 0;
+}
+
+.stone-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  opacity: 0;
+}
+
+
+.fbsticker {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+/* 回最上面按鈕 */
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 2;
+}
+
+#back-to-top.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#back-to-top.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.gototop {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.gototop:hover {
+  background-color: rgba(192, 14, 14, 0.5);
+  border: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gototop:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}

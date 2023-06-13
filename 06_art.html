@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美宣品</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        .illustration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .illustration-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff00;
+            border-radius: 8px;
+            padding: 20px;
+            opacity: 0;
+        }
+
+        .illustration-item img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        .carousel-inner {
+            position: relative;
+            display: flex;
+            width: 100vh;
+            opacity: 0;
+        }
+
+        #image-popup {
+            background-color: rgba(0, 0, 0, 0.5);
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            cursor: pointer;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+
+    <link rel="icon" href="/pics/LOGO.png" type="image/x-icon">
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="background.css">
+<script src="navbar.js"></script>
+<script src="anime.js"></script>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+    <div id="container">
+        <div id="navbar-setup">
+            <div id="navbar" data-bs-spy="scroll" data-bs-target="#navbar"></div>
+            <!-- 必加，控navbar -->
+
+
+            <div class="screen" id="content">
+                <div class="bg">
+                    <div class="bg2">
+                        <div class="screen">
+                            <!-- 必加，控背景圖 -->
+
+                            <div class="enter"></div>
+                            <div class="enter"></div>
+                            <div class="enter"></div>
+
+
+                            <div class="container col-md-8">
+                                <div class="row justify-content-center">
+
+                                    <h class="type1">美宣品</h>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <div class="illustration-grid">
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/海報完稿.jpg" alt="Illustration 1"
+                                                    onclick="showImage('pics/art/海報完稿.jpg')">
+                                                <div class="caption">活動海報</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="enter"></div>
+
+                                    <div class="illustration-grid">
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/橫幅_完稿.PNG" alt="Illustration 1"
+                                                    onclick="showImage('pics/art/橫幅_完稿.PNG')">
+                                                <div class="caption">橫幅</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">名牌</h>
+                                    <div class="illustration-grid">
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/工人牌 有字.jpg" alt="Illustration 3"
+                                                    onclick="showImage('pics/art/工人牌 有字.jpg')">
+                                                <div class="caption">工人牌</div>
+                                            </div>
+                                        </div>
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/工人牌 有字2.jpg" alt="Illustration 4"
+                                                    onclick="showImage('pics/art/工人牌 有字2.jpg')">
+                                                <div class="caption">學員牌</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">PPT版型</h>
+                                    <div id="carouselExampleControls5" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/PPT版型1.png" class="d-block w-100" alt="...">
+                                                <div class="caption">PPT封面</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/PPT版型2.png" class="d-block w-100" alt="...">
+                                                <div class="caption">PPT內頁</div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls5" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls5" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">天使惡魔卡</h>
+                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/天使卡.PNG" class="d-block w-100" alt="...">
+                                                <div class="caption">天使卡</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/惡魔卡.PNG" class="d-block w-100" alt="...">
+                                                <div class="caption">惡魔卡</div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">紀念品</h>
+                                    <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/徽章.png" class="d-block w-100" alt="...">
+                                                <div class="caption">徽章</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/學員.png" class="d-block w-100" alt="...">
+                                                <div class="caption">吊飾A</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/工人.png" class="d-block w-100" alt="...">
+                                                <div class="caption">吊飾B</div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">營手冊</h>
+                                    <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/book/營手冊-01.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-02.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-03.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item ">
+                                                <img src="pics/art/book/營手冊-04.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-05.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-06.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item ">
+                                                <img src="pics/art/book/營手冊-07.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-08.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-09.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-10.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-11.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item ">
+                                                <img src="pics/art/book/營手冊-12.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/book/營手冊-13.png" class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">倒數圖</h>
+                                    <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/倒數5.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/倒數4.png" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/倒數3.jpg" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/倒數2.jpg" class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/倒數1.jpg" class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">場佈圖</h>
+                                    <div id="carouselExampleControls6" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/場佈1.jpg" class="d-block w-100" alt="...">
+                                                <div class="caption">場佈-梅太郎</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/場佈2.jpg" class="d-block w-100" alt="...">
+                                                <div class="caption">場佈-千鶴</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/場佈3.jpg" class="d-block w-100" alt="...">
+                                                <div class="caption">場佈-燐</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/場佈4.jpg" class="d-block w-100" alt="...">
+                                                <div class="caption">場佈-山吹</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/指示牌.png" class="d-block w-100" alt="...">
+                                                <div class="caption">指示牌</div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">隊輔卡片</h>
+                                    <div class="illustration-grid">
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/隊輔卡片.png" alt="Illustration 1"
+                                                    onclick="showImage('pics/art/隊輔卡片.png')">
+                                                <div class="caption">隊輔卡片</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">獎狀</h>
+                                    <div id="carouselExampleControls7" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/art/獎狀_完稿.png" class="d-block w-100" alt="...">
+                                                <div class="caption">小隊獎狀</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/精神總錦標_完稿.png" class="d-block w-100" alt="...">
+                                                <div class="caption">精神總錦標</div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/art/結業證書_完稿.png" class="d-block w-100" alt="...">
+                                                <div class="caption">結業證書</div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls7" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls7" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="enter"></div>
+                                    <div class="enter"></div>
+
+                                    <h class="type1">營服</h>
+                                    <div class="illustration-grid">
+                                        <div class="illustration-item">
+                                            <div class="image-container">
+                                                <img src="pics/art/營踢.jpg" alt="Illustration 1"
+                                                    onclick="showImage('pics/art/營踢.jpg')">
+                                                <div class="caption">營服樣式</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-container">
+                                        <span class="modal-close" onclick="closeModal()">&times;</span>
+                                        <img class="modal-image" src="" alt="Full Screen Image">
+                                    </div>
+                                </div>
+
+                                <div class="enter"></div>
+                                <div class="enter"></div>
+                                <div class="enter"></div>
+                                <div class="enter"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <iframe src="snow.html" frameborder="0" class="fixed-iframe" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <a id="back-to-top" href="#content" class="gototop">
+            <i class="bi bi-arrow-up-circle"></i> 回到頂部 </a>
+        <script src="gototop.js"></script>
+        <!-- 必加，控按鈕 -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- 必加，控動畫 -->
+
+        <script src="art_toast.js"></script>
+        <!-- 彈出視窗 -->
+
+        <script>
+            window.addEventListener('scroll', function () {
+                var elements = document.querySelectorAll('.carousel-inner');
+                var windowHeight = window.innerHeight;
+
+                elements.forEach(function (element) {
+                    var scrollPosition = element.getBoundingClientRect().top;
+
+                    if (scrollPosition < windowHeight * 0.75 && !element.classList.contains('animate__fadeIn')) {
+                        element.style.opacity = 1;
+                        element.classList.add('animate__animated', 'animate__fadeIn');
+                    } else if (scrollPosition >= windowHeight * 1.0 && element.classList.contains('animate__fadeIn')) {
+                        element.style.opacity = 0;
+                        element.classList.remove('animate__animated', 'animate__fadeIn');
+                    }
+                });
+            });
+        </script>
+        <!-- carosel動畫 -->
+
+
+        <script>
+            var carouselItems = document.querySelectorAll('.carousel-item');
+            var modalContainer = document.querySelector('.modal-container');
+            var modalImage = document.querySelector('.modal-image');
+
+            carouselItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var imgSrc = this.querySelector('img').getAttribute('src');
+                    modalImage.setAttribute('src', imgSrc);
+                    modalContainer.style.display = 'flex';
+                });
+            });
+
+            modalContainer.addEventListener('click', function (event) {
+                if (event.target === modalContainer) {
+                    closeModal();
+                }
+            });
+
+            function closeModal() {
+                modalContainer.style.display = 'none';
+            }
+
+            function showImage(imageSrc) {
+                var popupImage = document.getElementById('popup-image');
+                popupImage.setAttribute('src', imageSrc);
+
+                var toastElement = document.getElementById('image-popup');
+                var bootstrapToast = new bootstrap.Toast(toastElement);
+                bootstrapToast.show();
+            }
+
+        </script>
+
+        <script>
+            var imageContainers = document.querySelectorAll('.image-container');
+            var modalContainer = document.querySelector('.modal-container');
+            var modalImage = document.querySelector('.modal-image');
+
+            imageContainers.forEach(function (container) {
+                container.addEventListener('click', function () {
+                    var imgSrc = this.querySelector('img').getAttribute('src');
+                    modalImage.setAttribute('src', imgSrc);
+                    modalContainer.style.display = 'flex';
+                });
+            });
+
+            modalContainer.addEventListener('click', function (event) {
+                if (event.target === modalContainer) {
+                    closeModal();
+                }
+            });
+
+            function closeModal() {
+                modalContainer.style.display = 'none';
+            }
+        </script>
+        <!-- 放大圖片 -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+
+            </script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</body>
+
+</html>

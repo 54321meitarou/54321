@@ -1,0 +1,595 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="background.css">
+<script src="navbar.js"></script>
+<script src="anime.js"></script>
+
+
+
+<style>
+    .rpgbox {
+        position: relative;
+        display: grid;
+        height: auto;
+        max-width: 80%;
+        justify-content: center;
+        min-width: 100%;
+        z-index: 10;
+    }
+
+    .rpgmap {
+        position: absolute;
+        display: flex;
+        height: auto;
+        max-width: 80%;
+        justify-content: center;
+        min-width: 100%;
+        z-index: 10;
+    }
+
+    .rpgdot {
+        position: relative;
+        height: 100%;
+        max-width: 100%;
+        justify-content: center;
+        min-width: 100%;
+        z-index: 12;
+        display: flex;
+        padding: none;
+        margin: auto;
+    }
+
+    .rpgwhere {
+        position: relative;
+        display: flex;
+        height: auto;
+        width: auto;
+        justify-content: center;
+        padding: none;
+        z-index: 11;
+        margin: auto;
+    }
+
+    .popup {
+        position: fixed;
+        display: flex;
+        z-index: 25;
+        top: 50%;
+        background-color: rgba(6, 5, 5, 0.9);
+        transform: translate(0%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        max-height: 90%;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+
+    .popup-box-pic {
+        position: relative;
+        display: flex;
+        max-width: 30%;
+        max-height: 30%;
+        top: -20%;
+        object-fit: contain;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+
+
+
+<body>
+
+    <div class="rpgbox col-md-9 col-sm-12">
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/1-1.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup1')">
+                    <img src="pics/rpg/map/1-2_雜.png" alt="" class="img-fluid">
+                </button>
+            </div>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/1-3.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup2')">
+                    <img src="pics/rpg/map/1-4_水.png" alt="" class="img-fluid">
+            </div>
+            </button>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup3')">
+                    <img src="pics/rpg/map/1-5_萬.png" alt="" class="img-fluid">
+            </div>
+            </button>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/1-6.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/2-1.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup4')">
+                    <img src="pics/rpg/map/2-2_俳.png" alt="" class="img-fluid">
+            </div>
+            </button>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/2-3.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup5')">
+                    <img src="pics/rpg/map/2-4_忍.png" alt="" class="img-fluid">
+            </div>
+            </button>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/2-5.png" alt="" class="img-fluid">
+            </div>
+
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/4-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup6')">
+                    <img src="pics/rpg/map/4-2_茶.png" alt="" class="img-fluid">
+                </button>
+            </div>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup7')">
+                    <img src="pics/rpg/map/4-3_舶.png" alt="" class="img-fluid">
+                </button>
+            </div>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/4-4.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/5.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/6-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup8')">
+                    <img src="pics/rpg/map/6-2_旅.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/6-3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/7-1.png" alt="" class="img-fluid">
+            </div>
+
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup9')">
+                    <img src="pics/rpg/map/7-2_武.png" alt="" class="img-fluid">
+                </button>
+            </div>
+
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/7-3.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup10')">
+                    <img src="pics/rpg/map/7-4_藝.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/7-5.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup11')">
+                    <img src="pics/rpg/map/7-6_神秘.png" alt="" class="img-fluid">
+                </button>
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/8-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup12')">
+                    <img src="pics/rpg/map/8-2_童.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/8-3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/9.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/10-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup13')">
+                    <img src="pics/rpg/map/10-2_梅.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/10-3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/11.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/12-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup14')">
+                    <img src="pics/rpg/map/12-2_千.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/12-3.png" alt="" class="img-fluid">
+            </div>
+            <div class="rpgwhere">
+                <button class="image-button" onclick="showPopup('popup15')">
+                    <img src="pics/rpg/map/12-4_醫.png" alt="" class="img-fluid">
+                </button>
+            </div>
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/12-5.png" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="rpgdot">
+            <div class="rpgwhere">
+                <img src="pics/rpg/map/13.png" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="rpgmap">
+            <img src="pics/rpg/map/地圖2_工作區域 1.png" alt="" class="rpgmap">
+        </div>
+    </div>
+    <!-- 加回到選擇路線 -->
+    <!-- 地圖iframe -->
+    <div class="rpgbox">
+        <div class="rpgmap">
+            <div class="popup" id="popup1" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup1')">×</button>
+                    <img src="pics/rpg/雜貨店.PNG" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">雜貨舖老伯──佐藤正義</div>
+                    <div class="type12">小長頸 (謝義安)</div>
+                    <p></p>
+                    <div class="type13">
+                        百貨五金、雜糧零嘴在這裡都能找到。和藹可親，是小朋友的守護者。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup2" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup2')">×</button>
+                    <img src="pics/rpg/水果攤.PNG" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">水果攤老闆──豐田咲</div>
+                    <div class="type12">美添翱葉 (許美萱)</div>
+                    <p></p>
+                    <div class="type13">
+                        豪爽、不拘小節，曾和大武將是戰友；現在已經退休，在市集經營水果攤。
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="popup" id="popup3" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup3')">×</button>
+                    <img src="pics/rpg/KTM1.png" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">萬事屋──金玉先生</div>
+                    <div class="type12">火建仁 (尤大街)</div>
+                    <p></p>
+                    <div class="type13">
+                        街角那間萬事屋的主人，是個狡詐、隨心所欲的愉快犯，什麼稀奇古怪的商品都能在店內找到，什麼艱鉅骯髒的委託都接。<br>
+                        似乎在暗中和御岐山吹有商業往來，並直接參與了某事件。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup4" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup4')">×</button>
+                    <img src="pics/rpg/俳句.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">俳句詩人──渡邊琴子</div>
+                    <div class="type12">忍者你逆 (周子秦)</div>
+                    <p></p>
+                    <div class="type13">
+                        神秘且熱愛自由，常常不顧旁人，神遊在自己的詩意世界中。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup5" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup5')">×</button>
+                    <img src="pics/忍者大頭.png" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">忍者──燐</div>
+                    <div class="type12">藤原豆花店 (林仕申)</div>
+                    <p></p>
+                    <div class="type13">
+                        因偷襲行動失敗而身負重傷，體力不支倒在草叢深處，情況似乎非常危急。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup6" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup6')">×</button>
+                    <img src="pics/rpg/茶樓.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">茶樓老闆──夏目國美</div>
+                    <div class="type12">佛山無應手 (劉得心)</div>
+                    <p></p>
+                    <div class="type13">
+                        位於市集黃金地帶、人潮絡繹不絕的茶樓店主。懷抱少女心、熱愛八卦。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup7" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup7')">×</button>
+                    <img src="pics/rpg/舶來品.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">舶來品商人──克利文</div>
+                    <div class="type12">忍者ㄍㄨㄞ (黃苡瑄)</div>
+                    <p></p>
+                    <div class="type13">
+                        四處遊歷的舶來品商人。<br>
+                        對西洋文化特別熱愛與執著，背上的大背包裡塞滿他從外國進來的大量珍稀物品。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup8" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup8')">×</button>
+                    <img src="pics/rpg/武將家旅店.PNG" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">武將家旅店──武田新</div>
+                    <div class="type12">忍者ㄍㄨㄟ (謝忻芸)</div>
+                    <p></p>
+                    <div class="type13">
+                        大武將母親經營的旅店，一樓的店舖也有販賣茶水和點心。<br>
+                        和藹親切，喜歡跟人聊天、泡茶。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup9" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup9')">×</button>
+                    <img src="pics/rpg/鬼頭.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">武器鋪老闆──鬼頭研二郎</div>
+                    <div class="type12">你的名稱違反社群守則 (劉育瑋)</div>
+                    <p></p>
+                    <div class="type13">
+                        向日葵武器舖的老闆，大武將是老客戶。性格頑固、有些嚴厲，由於上了年紀而急著培養學徒。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup10" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup10')">×</button>
+                    <img src="pics/rpg/藝術家.PNG" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">落魄藝術家──水野青見</div>
+                    <div class="type12">亮亮 (周靚瑄)</div>
+                    <p></p>
+                    <div class="type13">
+                        沉悶壓抑、有點厭世，在市集最外圍有個賣藝術作品的攤位，但作品似乎沒有減少過。<br>
+                        和神祕女子有著密切往來。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup11" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup11')">×</button>
+                    <img src="pics/rpg/神秘.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">神秘女子──？？？</div>
+                    <div class="type12">薑餅竹 (張品筑)</div>
+                    <p></p>
+                    <div class="type13">
+                        居住在遠離鎮中央的邊陲地區，很有想法，卻總是一副心事重重的樣子。<br>
+                        似乎曾為御岐山吹的手下，不過在某事件發生後決裂，就此隱居郊外。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup12" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup12')">×</button>
+                    <img src="pics/rpg/童僕.jpg" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">童僕──村雲香</div>
+                    <div class="type12">香香 (蕭勻襄)</div>
+                    <p></p>
+                    <div class="type13">
+                        在束梅寺做著雜務，夢想是有一天能住進跟束梅寺一樣大的屋子。<br>
+                        活潑而充滿好奇心，很喜歡唱歌。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup13" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup13')">×</button>
+                    <img src="pics/主角大頭.png" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">討伐召集人──相良梅太郎</div>
+                    <div class="type12">鬼十羽 (魏千翔)</div>
+                    <p></p>
+                    <div class="type13">
+                        憂心忡忡的等待著新生代武士們，帶來關於大武將的好消息。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup14" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup14')">×</button>
+                    <img src="pics/軍師大頭.png" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">軍師──八咫千鶴</div>
+                    <div class="type12">妘隱村 (江砡妘)</div>
+                    <p></p>
+                    <div class="type13">
+                        認為下落不明的忍者肯定握有關鍵情報，指示新生代武士前往搜尋忍者的蹤跡。
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id="popup15" style="display: none;">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup('popup15')">×</button>
+                    <img src="pics/rpg/醫生.PNG" alt="" class="popup-box-pic">
+                    <div class="enter-tx"></div>
+                    <div class="enter-tx"></div>
+                    <div class="type11">醫生──堀江日和</div>
+                    <div class="type12">都梅穗酵 (江易耘)</div>
+                    <p></p>
+                    <div class="type13">
+                        束梅寺的駐點醫生。<br>
+                        講求利益、看不起窮人，但本質上還是個好醫生，會用惡毒的言語拐彎抹角的幫助人。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'flex';
+        }
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function () {
+            var _h = $(document).height();//取得網頁高度
+            parent.postMessage({ h: _h }, '*');//將高度值，傳到父層
+        });
+    </script>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- 必加，控動畫 -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
