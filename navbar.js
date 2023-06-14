@@ -26,11 +26,12 @@ function showConfirmationModal2() {
   const confirmationModalYesButton3 = document.getElementById('confirmationModalYesButton3');
 
   confirmationModalYesButton3.addEventListener('click', function() {
-      window.location.href = 'https://vanessa91092951.wixsite.com/unity-so-difficult';
+      window.open('https://vanessa91092951.wixsite.com/unity-so-difficult', '_blank');
   });
 
   confirmationModal2.show();
 }
+
 
 
 // RPG對話框放大圖片
