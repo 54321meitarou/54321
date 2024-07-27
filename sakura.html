@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>櫻花瓣動畫效果</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #eaf7ff; /* 背景顏色 */
+        }
+        .sakura {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sakura span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('pic.png') no-repeat; /* 請更換為實際的櫻花瓣圖片URL */
+            background-size: cover;
+            opacity: 0.8;
+            animation: fall 10s infinite linear;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: translateX(var(--translate-x-start)) rotate(var(--rotate-start));
+            }
+            50% {
+                top: 50%;
+                transform: translateX(var(--translate-x-end)) rotate(var(--rotate-end));
+            }
+            100% {
+                top: 100%;
+                transform: translateX(var(--translate-x-start)) rotate(var(--rotate-start));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sakura">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sakura span').each(function() {
+                // 隨機設定更大範圍的左右移動
+                var translateXStart = Math.random() * 300 - 150; // -150px 到 150px
+                var translateXEnd = Math.random() * 300 - 150; // -150px 到 150px
+                var rotateStart = Math.random() * 360; // 隨機旋轉角度 0deg 到 360deg
+                var rotateEnd = Math.random() * 360; // 隨機旋轉角度 0deg 到 360deg
+                
+                $(this).css({
+                    '--translate-x-start': translateXStart + 'px',
+                    '--translate-x-end': translateXEnd + 'px',
+                    '--rotate-start': rotateStart + 'deg',
+                    '--rotate-end': rotateEnd + 'deg',
+                    left: Math.random() * 100 + 'vw',
+                    animationDelay: Math.random() * 5 + 's',
+                    animationDuration: Math.random() * 5 + 5 + 's'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
